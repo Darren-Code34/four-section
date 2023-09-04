@@ -46,6 +46,7 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .card{
@@ -53,11 +54,18 @@ body{
     box-shadow: 1px 5px 10px hsl(229, 6%, 66%),
                 -2px -2px 5px hsl(229, 6%, 66%);
     padding: 30px 20px 20px;
-    margin-bottom: 20px;
     font-size: 13px;
     color: hsl(229, 6%, 66%);
     border-radius: 6px;
     line-height: 20px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.card p{
+    margin-bottom: 30px;
 }
 
 .supervisor{
@@ -89,4 +97,57 @@ body{
     margin-left: auto;
     margin-right: 0;
     width: 50px;
+}
+
+.attribution{
+    margin-bottom: 30px;
+}
+
+/* reponsive design */
+
+@media screen and (min-width: 900px) {
+    .first-title{
+        font-size: 28px;
+    }
+    .second-title{
+        font-size: 28px;
+    }
+
+    .description{
+        min-width: 500px;
+    }
+
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card{
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .supervisor{
+        grid-column: 1;
+        top: 100px;
+    }
+
+    .team{
+        grid-column: 2;
+    }
+
+    .karma{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .calculator{
+        grid-column: 3;
+        top: 100px;
+    }
 }
