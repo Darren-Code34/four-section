@@ -130,6 +130,11 @@ body{
     .card{
         margin-bottom: 0;
         position: relative;
+        font-size: 15px;
+    }
+
+    .card h3{
+        font-size: 18px;
     }
 
     .supervisor{
